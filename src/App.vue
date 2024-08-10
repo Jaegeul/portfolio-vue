@@ -102,9 +102,11 @@
                         <div class="skill_title">Frontend</div>
                         <img class="skill_img" src="./assets/images/html,js,css.png"/>
                         <img class="skill_img" src="./assets/images/jquery.png"/>
+                        <img class="skill_img" src="./assets/images/vue.png"/>
                     </div>
                     <div class="skills_tech_stacks hov">
                         <div class="skill_title">Deployment</div>
+                        <img class="skill_img" src="./assets/images/netlify.png"/>
                     </div>
                     <div class="skills_tech_stacks hov">
                         <div class="skill_title">Version Control</div>
@@ -112,7 +114,7 @@
                         <img class="skill_img" src="./assets/images/github.png"/>
                         <img class="skill_img" src="./assets/images/sourcetree.png" style="margin-left: 5px;"/>
                     </div>
-
+                    
                 </div>
             </section>
             <section id="archiving" class="archiving">
@@ -152,96 +154,95 @@
                     <div class="projects_title">포트폴리오 웹사이트</div>
                     <div class="projects_period">2024.06&nbsp;(개인 프로젝트)</div>
                     <div class="projects_info">
-                        <div class="projects_img-carousel">
+                        <div class="projects_img-carousel2">
                             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-indicators">
                                     <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselExampleAutoplaying" v-for="index in 3" :key="index" :data-bs-slide-to="[index]" :aria-label="'Slide '+ (index+1)" ></button>
+                                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="4" aria-label="Slide 5"></button>
                                     
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="./assets/images/gg.jpg" class="d-block w-100" alt=".">
+                                        <img src="./assets/images/portfolio/1.png" class="d-block w-100" alt=".">
                                     </div>
-                                    <div class="carousel-item">
-                                        <img src="./assets/images/gg.jpg" class="d-block w-100" alt=".">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="./assets/images/gg.jpg" class="d-block w-100" alt=".">
+                                    <div v-for="(image, index) in images1" :key="index" class="carousel-item">
+                                        <img :src="image" class="d-block w-100">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="carousel-control-prev-icon icon-color" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
                                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="carousel-control-next-icon icon-color" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
                             </div>
                         </div>
-                        <div class="projects_descriptions">
-                            <div class="projects_main-descriptions">
+                        <div class="projects_descriptions2">
+                            <div class="projects_main-descriptions2">
                                 <b>포트폴리오 용도로 제작한 웹사이트</b>입니다. 지금 보고 있는 바로 이 사이트에 해당합니다.
                                 다양한 언어를 접하고 경험을 쌓기 위한 첫 걸음으로 포트폴리오 사이트를 제작 하였습니다.
                                 <p></p>
-                                이미 Javascript와 jQuery로 개발을 완료한 프로젝트였지만, <span class="projects_red">Vue.js</span>의 학습을 위해
+                                이미 Javascript와 jQuery를 사용하여 개발을 완료한 프로젝트였지만, <span class="projects_red">Vue.js</span>의 학습을 위해
                                 이를 Vue.js로 다시 개발하였습니다. 그 과정에서 Vue.js의 장점인 쉬운 학습 곡선과 반응성, 서버 사이드 렌더링 등을 경험하였습니다.
-                                또한, <span class="projects_red"></span>
+                                또한, <span class="projects_red">Netlify</span>을 이용하여 정적 웹사이트의 배포를 경험해볼 수 있었습니다.
                                 <p></p>
                             </div>
-                            <div class="projects_description">
-                                <div class="projects_label">
-                                    <img class="label_img" src="./assets/images/check.svg" /> 주요기능
+                            <div class="projects_description_container">
+                                <div class="projects_description">
+                                    <div class="projects_label">
+                                        <img class="label_img" src="./assets/images/check.svg" /> 주요기능
+                                    </div>
+                                    <div class="projects_value">
+                                        간단한 자기소개, 인적 사항, 기술 스택, GitHub 및 포트폴리오 pdf 파일 링크, 프로젝트 경험
+                                    </div>
                                 </div>
-                                <div class="projects_value">
-                                    간단한 자기소개, 인적 사항, 기술 스택, GitHub 및 포트폴리오 pdf 파일 링크, 프로젝트 경험
-           ``                     </div>
-                            </div>
-                            <div class="projects_description">
-                                <div class="projects_label">
-                                    <img class="label_img" src="./assets/images/check.svg" /> 
-                                    <span class="projects_label_en">GitHub</span>
+                                <div class="projects_description">
+                                    <div class="projects_label">
+                                        <img class="label_img" src="./assets/images/check.svg" /> 
+                                        <span class="projects_label_en">GitHub</span>
+                                    </div>
+                                    <div class="projects_value">
+                                        <a class="projects_url" href="https://github.com/Jaegeul/portfolio-vue" target="_blank">github.com/Jaegeul/portfolio-vue</a>
+                                    </div>
                                 </div>
-                                <div class="projects_value">
-                                    <a class="projects_url" href="#" target="_blank">github.com/Jaegeul/Portfolio</a>
+                                <div class="projects_description">
+                                    <div class="projects_label">
+                                        <img class="label_img" src="./assets/images/check.svg" /> 
+                                        <span class="projects_label_en">URL</span>
+                                    </div>
+                                    <div class="projects_value">
+                                        <a class="projects_url" href="http://ljy-portfolio.site/" target="_blank">ljy-portfolio.site</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="projects_description">
-                                <div class="projects_label">
-                                    <img class="label_img" src="./assets/images/check.svg" /> 
-                                    <span class="projects_label_en">URL</span>
+                                <div class="projects_description">
+                                    <div class="projects_label">
+                                        <img class="label_img" src="./assets/images/check.svg" /> 
+                                        <span class="projects_label_en">Frontend</span>
+                                    </div>
+                                    <div class="projects_value">
+                                        Vue.js, Bootstrap
+                                    </div>
                                 </div>
-                                <div class="projects_value">
-                                    <a class="projects_url" href="#" target="_blank">~~.com</a>
+                                <div class="projects_description">
+                                    <div class="projects_label">
+                                        <img class="label_img" src="./assets/images/check.svg" /> 
+                                        <span class="projects_label_en">Deployment</span>
+                                    </div>
+                                    <div class="projects_value">
+                                        Netlify
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="projects_description">
-                                <div class="projects_label">
-                                    <img class="label_img" src="./assets/images/check.svg" /> 
-                                    <span class="projects_label_en">Frontend</span>
-                                </div>
-                                <div class="projects_value">
-                                    Vue.js, Bootstrap
-                                </div>
-                            </div>
-                            <div class="projects_description">
-                                <div class="projects_label">
-                                    <img class="label_img" src="./assets/images/check.svg" /> 
-                                    <span class="projects_label_en">Deployment</span>
-                                </div>
-                                <div class="projects_value">
-                                    fdffd
-                                </div>
-                            </div>
-                            <div class="projects_description">
-                                <div class="projects_label">
-                                    <img class="label_img" src="./assets/images/check.svg" /> 
-                                    <span class="projects_label_en">IDE</span>
-                                </div>
-                                <div class="projects_value">
-                                    Visual Studio Code
+                                <div class="projects_description">
+                                    <div class="projects_label">
+                                        <img class="label_img" src="./assets/images/check.svg" /> 
+                                        <span class="projects_label_en">IDE</span>
+                                    </div>
+                                    <div class="projects_value">
+                                        Visual Studio Code
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -264,15 +265,15 @@
                                     <div class="carousel-item active">
                                         <img src="./assets/images/Gongcha/1.png" class="d-block w-100" alt=".">
                                     </div>
-                                    <div v-for="(image, index) in images" :key="index" class="carousel-item">
+                                    <div v-for="(image, index) in images2" :key="index" class="carousel-item">
                                         <img :src="image" class="d-block w-100">
                                     </div>
                                 </div>
-                                <button class="carousel-control-prev postion" type="button" data-bs-target="#carouselExampleAutoplaying2" data-bs-slide="prev">
+                                <button class="carousel-control-prev position" type="button" data-bs-target="#carouselExampleAutoplaying2" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon icon-color" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next postion" type="button" data-bs-target="#carouselExampleAutoplaying2" data-bs-slide="next">
+                                <button class="carousel-control-next position" type="button" data-bs-target="#carouselExampleAutoplaying2" data-bs-slide="next">
                                     <span class="carousel-control-next-icon icon-color" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
@@ -324,7 +325,7 @@
                                         <span class="projects_label_en">Backend</span>
                                     </div>
                                     <div class="projects_value">
-                                        Java(JDK 1.8), Spring Framework
+                                        Java(JDK 1.8), Spring Framework, Mybaits
                                     </div>
                                 </div>
                                 <div class="projects_description">
@@ -359,7 +360,13 @@
 export default {
   data() {
     return {
-        images: [
+        images1: [
+            require('./assets/images/portfolio/2.png') ,
+            require('./assets/images/portfolio/3.png') ,
+            require('./assets/images/portfolio/4.png') ,
+            require('./assets/images/portfolio/5.png') 
+        ],
+        images2: [
             require('./assets/images/Gongcha/2.png') ,
             require('./assets/images/Gongcha/3.png') ,
             require('./assets/images/Gongcha/4.png') ,

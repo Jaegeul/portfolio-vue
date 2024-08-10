@@ -120,8 +120,6 @@ li{
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
-
-    overflow-y: scroll;
 }
 
 .hi{
@@ -241,7 +239,7 @@ li{
 .about_me_value{
     font-weight: 400;
     font-size: 1rem;
-    font-family: sans-serif;
+    font-family: 'Pretendard-Regular';
 }
 
 .skills{
@@ -498,7 +496,7 @@ li{
     background-color: darkgray;
 }
 
-.postion{
+.position{
     width: 5%;
 }
 
