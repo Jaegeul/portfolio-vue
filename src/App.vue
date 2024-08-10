@@ -152,7 +152,7 @@
                 <h2 class="title">Projects</h2>
                 <div class="projects_container">
                     <div class="projects_title">포트폴리오 웹사이트</div>
-                    <div class="projects_period">2024.06&nbsp;(개인 프로젝트)</div>
+                    <div class="projects_period">2024.07&nbsp;~&nbsp;2024.08&nbsp;(개인 프로젝트)</div>
                     <div class="projects_info">
                         <div class="projects_img-carousel2">
                             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
