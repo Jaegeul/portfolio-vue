@@ -214,7 +214,7 @@
                                         <span class="projects_label_en">URL</span>
                                     </div>
                                     <div class="projects_value">
-                                        <a class="projects_url" href="http://ljy-portfolio.site/" target="_blank">ljy-portfolio.site</a>
+                                        <a class="projects_url" href="https://ljy-portfolio.site/" target="_blank">ljy-portfolio.site</a>
                                     </div>
                                 </div>
                                 <div class="projects_description">
